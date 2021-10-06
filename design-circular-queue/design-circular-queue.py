@@ -41,6 +41,7 @@ class MyCircularQueue:
     def isFull(self) -> bool:
         return self.items == (self.size -1)
     
+        
 
 
 # Your MyCircularQueue object will be instantiated and called as such:
