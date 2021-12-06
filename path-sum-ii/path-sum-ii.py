@@ -8,10 +8,10 @@ class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
         path=[]
         def findpath(root,targetSum,curr):
-            if root == None:
-                return
+            if not root:
+                return 
             curr.append(root.val)
-            if root.val == targetSum and root.left==None and root.right==None:
+            if root.val == targetSum and root.left == None and root.right==None:
                 path.append(curr)
                 return
             findpath(root.left,targetSum-root.val,curr[:])
